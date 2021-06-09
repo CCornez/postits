@@ -1,5 +1,12 @@
 import "../css/style.scss";
-import Square from "./classes/Square";
+import Postit from "./classes/Postit";
 
-new Square(20, 20, 200, document.querySelector(".test"));
-console.log(process.env.SECRET);
+new Array(200)
+  .fill("")
+  .forEach(() => new Postit("Makro", ["iPhone", "kabeljauw", "beamer"]));
+
+document.body.onclick = () => {
+  Postit.allPostits.forEach((postit) => postit.htmlRef.remove());
+  console.log(`Removed ${Postit.countAll()} items.`);
+  Postit.allPostits.length = 0;
+};
