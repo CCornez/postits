@@ -3,6 +3,7 @@ import { randomRange } from "../helpers";
 class Postit {
   #title;
   #list;
+  #listHTML;
   #x;
   #y;
   #rotation;
@@ -14,6 +15,7 @@ class Postit {
   constructor(title, list = []) {
     this.#title = title;
     this.#list = list;
+    this.#listHTML = `<ul><li>${this.#list.join("</li><li>")}</li></ul>`;
     this.#x = randomRange(175, window.innerWidth - 195, true);
     this.#y = randomRange(74, window.innerHeight - 326, true);
     this.#rotation = randomRange(0, 11, true) * (Math.random() > 0.5 ? 1 : -1);
@@ -21,12 +23,13 @@ class Postit {
     this.htmlRef = this.#init();
     this.#style();
     Postit.allPostits.push(this);
-    this.#restack();
   }
   #init() {
     document.body.insertAdjacentHTML(
       "afterbegin",
-      `<div class= 'postit postit--${this.#color}'></div>`
+      `<div class= 'postit postit--${this.#color}'><h1>${this.#title}</h1>${
+        this.#listHTML
+      }</div>`
     );
     return document.querySelector(".postit:first-child");
   }
@@ -37,9 +40,6 @@ class Postit {
       transform: `rotate(${this.#rotation}deg)`,
     };
     Object.assign(this.htmlRef.style, styles);
-  }
-  #restack() {
-    Postit.allPostits.sort();
   }
 }
 

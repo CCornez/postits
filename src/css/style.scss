@@ -29,3 +29,23 @@ body {
     background-image: url("../images/yellow.png");
   }
 }
+.postit h1 {
+  font-size: 26px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.postit ul li {
+  position: relative;
+  padding-left: 30px;
+}
+.postit ul li::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 8px;
+  left: 20px;
+  width: 7px;
+  height: 1px;
+  background-color: black;
+}
