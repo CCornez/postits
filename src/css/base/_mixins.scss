@@ -18,6 +18,9 @@
   > *:nth-child(1n + 0) {
     margin: 0 $gap $gap 0;
     width: calc((100% - #{($cols - 1) * $gap}) / #{$cols});
+    > img {
+      @include responsive;
+    }
   }
 
   > *:nth-child(#{$cols}n + 0) {
@@ -25,7 +28,7 @@
   }
 }
 
-%responsive {
+@mixin responsive {
   display: block;
   width: 100%;
   height: auto;
