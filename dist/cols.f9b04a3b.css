@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+.icon-library {
+  width: 1.0625em;
+}
+html {
+  font-size: 62.5%;
+}
+#container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.grid {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #ccc;
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid > *:nth-child(1n+0) {
+  margin: 0 12px 12px 0;
+  width: calc((100% - 36px) / 4);
+}
+.grid > *:nth-child(1n+0) > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.grid > *:nth-child(4n+0) {
+  margin-right: 0;
+}
+.grid__item p {
+  font-size: 2rem;
+}
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 58%;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .grid > *:nth-child(1n+0) {
+    margin: 0 12px 12px 0;
+    width: calc((100% - 24px) / 3);
+  }
+  .grid > *:nth-child(1n+0) > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .grid > *:nth-child(3n+0) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 52%;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .grid > *:nth-child(1n+0) {
+    margin: 0 12px 12px 0;
+    width: calc((100% - 12px) / 2);
+  }
+  .grid > *:nth-child(1n+0) > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .grid > *:nth-child(2n+0) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .grid > *:nth-child(1n+0) {
+    margin: 0 12px 12px 0;
+    width: calc((100% - 0px) / 1);
+  }
+  .grid > *:nth-child(1n+0) > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .grid > *:nth-child(1n+0) {
+    margin-right: 0;
+  }
+}
+/*# sourceMappingURL=cols.f9b04a3b.css.map */
